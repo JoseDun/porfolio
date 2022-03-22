@@ -363,10 +363,86 @@ section {
           .css{
             width: 70%;
           }
+          .html{
+            width: 90%;
+          }
          
         
         }
       }
     }
   }
+}
+
+.stat-title{
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  padding: 3.5rem 0;
+  text-align: center;
+  position: relative;
+  &::before{
+    content: "";
+    top: 0;
+    width: 40%;
+    height: .1rem ;
+    left: 50%;
+    background-color: $color-grey-5;
+    transform: translateX(-50%);
+  }
+
+}
+
+.timeline{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid: gap 2rem; 
+  padding-bottom:  3rem ;
+  .timeline-item{
+    position: relative;
+    padding-left: 3rem;
+    border-left: .1rem solid $color-grey-5;
+    .tl-icon{
+      position: absolute;
+      left: -47px;
+      top: 0;
+      background-color: $colo-secondary;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i{
+        font-size: 1.3rem;
+      }
+    }
+
+    .tl-duration{
+      padding: .2rem .6rem  ;
+      background-color: $color-grey-5;
+      border-radius: 15px;
+      display: inline-block;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    h5{
+      padding: 1.8rem 0;
+      text-transform: uppercase;
+      font-size:large;
+      font-weight: 700;
+      span{
+        color: $color-grey-2;
+        font-weight: 600;
+        font-size: 1.3rem;
+
+      }
+    }
+    p{
+      color: $color-grey-2;
+      font-size: medium;
+
+    }
+  }
+
 }
