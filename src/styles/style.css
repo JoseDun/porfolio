@@ -200,7 +200,7 @@ section {
 .header-content .left-header .image {
   border-radius: 1.4rem;
   height: 90%;
-  width: 70%;
+  width: 80%;
   margin-left: 3.5rem;
   background-color: black;
   -webkit-transition: all 0.4s ease-in-out;
@@ -703,5 +703,80 @@ section {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.blogs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (0.5fr)[3];
+      grid-template-columns: repeat(3, 0.5fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.blogs .blog-item {
+  position: relative;
+  background-color: #2a2e35;
+  border-radius: 5px;
+  -webkit-box-shadow: 0.1rem 0.1rem 2rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.1rem 0.1rem 2rem rgba(0, 0, 0, 0.1);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.blogs .blog-item img {
+  width: 100%;
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.blogs .blog-item:hover {
+  -webkit-box-shadow: 0.1rem 0.1rem 2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0.1rem 0.1rem 2rem rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.blogs .blog-item:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0.1rem 0.4rem 2rem rgba(0, 0, 0, 0.8);
+          box-shadow: 0.1rem 0.4rem 2rem rgba(0, 0, 0, 0.8);
+}
+
+.blogs .blog-item .blog-text {
+  margin-top: -7px;
+  padding: 1.2rem;
+  border-top: 8px solid #0092cc;
+}
+
+.blogs .blog-item .blog-text h4 {
+  font-size: large;
+  margin-bottom: .7rem;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+}
+
+.blogs .blog-item .blog-text h4:hover {
+  color: #0092cc;
+}
+
+.blogs .blog-item .blog-text p {
+  color: #0092cc;
+  line-height: 2rem;
+  padding-bottom: 1rem;
+  font-size: medium;
 }
 /*# sourceMappingURL=style.css.map */
