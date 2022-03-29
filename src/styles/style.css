@@ -15,34 +15,40 @@ html {
 :root {
   --color-primary: #191d2b;
   --color-secondary: #0092cc;
-  --color-white: white;
-  --color-black: black;
+  --color-font: white;
+  --color-black-pic: black;
+  --color-grey-0: #f8f8f8;
   --color-grey-1: #dbe1e8;
   --color-grey-2: #b2becd;
-  --color-grey-3: #6c7983;
+  --color-grey-3: #2a2e35;
   --color-grey-4: #454e56;
   --color-grey-5: #2a2e35;
-  --color-grey-6: #12181b;
+  --color-grey-6:  #f8f8f8;
+  --color-grey-7: #f8f8f8;
+  --color-input: #021000b6;
   --br-sm-2: 1.4rem;
   --box-shadow-1: 0 0.3rem 1.5rem rgba(0, 0, 0, 3);
 }
 
 .theme-light {
-  --color-primary: #191d2b;
-  --color-secondary: #cc4100;
-  --color-white: white;
-  --color-black: black;
-  --color-grey-1: #dbe1e8;
-  --color-grey-2: #b2becd;
-  --color-grey-3: #6c7983;
-  --color-grey-4: #454e56;
-  --color-grey-5: #2a2e35;
+  --color-primary: #f2f2f2;
+  --color-secondary: #5daeebfb;
+  --color-font: black;
+  --color-black-pic: black;
+  --color-grey-0: #f8f8f8;
+  --color-grey-1: #000;
+  --color-grey-2: #6c7983;
+  --color-grey-3: #e1e1e1;
+  --color-grey-4: #f8f8f8;
+  --color-grey-5: rgba(15, 14, 14, 0.705);
   --color-grey-6: #12181b;
+  --color-grey-7: #222222;
+  --color-input:#e1e1e1;
 }
 
 body {
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-font);
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -56,7 +62,7 @@ a {
 
 header {
   height: 100vh;
-  color: var(--color-white);
+  color: var(--color-font);
   overflow: hidden;
 }
 
@@ -164,7 +170,7 @@ section {
 }
 
 .controlls .active-btn i {
-  color: var(--color-white) !important;
+  color: var(--color-font) !important;
 }
 
 .controlls .control {
@@ -230,7 +236,7 @@ section {
   height: 90%;
   width: 80%;
   margin-left: 3.5rem;
-  background-color: var(--color-black);
+  background-color: var(--color-black-pic);
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   display: -webkit-box;
@@ -379,6 +385,7 @@ section {
           transform: translate(-50%, -50%);
   font-weight: 800;
   font-size: 6.3rem;
+  visibility: visible;
 }
 
 .about-container {
@@ -426,6 +433,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
 }
 
 .about-container .right-about .abt-text .large-text {
@@ -435,6 +443,7 @@ section {
 }
 
 .about-container .right-about .abt-text .small-text {
+  margin-top: 2.6rem;
   padding-left: 3rem;
   position: relative;
   text-transform: uppercase;
@@ -455,12 +464,25 @@ section {
 
 .about-container .left-about {
   padding-right: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-right: 5rem;
 }
 
 .about-container .left-about p {
   line-height: 2rem;
-  padding: 1rem;
   color: var(--color-grey-1);
+  margin: 2.6rem 0px;
 }
 
 .about-container .left-about h4 {
@@ -511,7 +533,7 @@ section {
 .about-stats .progress-bars .progress-bar .progress-con .progress {
   width: 100%;
   height: 0.45rem;
-  background-color: var(--color-grey-4);
+  background-color: var(--color-grey-7);
   margin-left: 1rem;
   position: relative;
 }
@@ -595,7 +617,7 @@ section {
 
 .timeline .timeline-item .tl-duration {
   padding: 0.2rem 0.6rem;
-  background-color: var(--color-grey-5);
+  background-color: var(--color-grey-3);
   border-radius: 15px;
   display: inline-block;
   font-size: 1.4rem;
@@ -677,7 +699,8 @@ section {
 
 .portfolios .portfolio-item .hover-items h3 {
   font-size: large;
-  color: var(--color-white);
+  font-weight: bolder;
+  color: var(--color-grey-0);
   margin-bottom: 1.5rem;
 }
 
@@ -715,12 +738,12 @@ section {
 
 .portfolios .portfolio-item .hover-items .icons .icon i {
   font-size: medium;
-  color: var(--color-white);
+  color: var(--color-font);
   margin: 0 0.1rem;
 }
 
 .portfolios .portfolio-item .hover-items .icons .icon:hover {
-  background-color: var(--color-white);
+  background-color: var(--color-grey-6);
 }
 
 .portfolios .portfolio-item .hover-items .icons .icon:hover i {
@@ -744,7 +767,7 @@ section {
 
 .blogs .blog-item {
   position: relative;
-  background-color: var(--color-grey-5);
+  background-color: var(--color-grey-3);
   border-radius: 5px;
   -webkit-box-shadow: 0.1rem 0.1rem 2rem rgba(0, 0, 0, 0.1);
           box-shadow: 0.1rem 0.1rem 2rem rgba(0, 0, 0, 0.1);
@@ -828,8 +851,13 @@ section {
 }
 
 .contact-content-con .left-contact p {
-  margin: 1rem;
+  margin: 1.6rem 0px 2.6rem;
   line-height: 2rem;
+  font-size: medium;
+}
+
+.contact-content-con .left-contact .contact-info {
+  margin-bottom: 2.2rem;
 }
 
 .contact-content-con .left-contact .contact-info .contact-item {
@@ -842,11 +870,6 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.contact-content-con .left-contact .contact-info .contact-item p {
-  margin: 0.3rem 0 !important;
-  padding: 0 !important;
 }
 
 .contact-content-con .left-contact .contact-info .contact-item .icon {
@@ -866,6 +889,11 @@ section {
   font-size: 1.3rem;
 }
 
+.contact-content-con .left-contact .contact-info .contact-item .icon p {
+  margin: 0.3rem 0 !important;
+  padding: 0 !important;
+}
+
 .contact-content-con .left-contact .contact-icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -880,8 +908,8 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: var(--color-white);
-  background-color: var(--color-grey-5);
+  color: var(--color-font);
+  background-color: var(--color-primary);
   cursor: pointer;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -895,7 +923,7 @@ section {
 }
 
 .contact-content-con .left-contact .contact-icon a:hover {
-  background-color: var(--color-secondary);
+  background-color: var(--color-font);
 }
 
 .contact-content-con .left-contact .contact-icon a:hover i {
@@ -933,11 +961,13 @@ section {
   font-size: inherit;
   padding: 0.8rem 1.1rem;
   outline: none;
-  border: none;
-  background-color: var(--color-grey-5);
+  border: solid 0.1rem var(--color-secondary);
+  background-color: var(--color-input);
   width: 100%;
-  color: var(--color-white);
+  color: var(--color-font);
   resize: none;
+  padding: 16px;
+  font-size: medium;
 }
 
 .contact-content-con .right-contact .i-control {

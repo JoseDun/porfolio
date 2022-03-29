@@ -12,7 +12,7 @@ function PageTransitions() {
       this.className += " active-btn";
     });
   } */
-  
+
   //!button click active class without this
   secBtn.forEach((eachBtn) => {
     eachBtn.addEventListener("click", (btn) => {
@@ -47,13 +47,19 @@ function PageTransitions() {
 
   //toggle theme
 
-  const themeBtn = document.querySelector('.theme-btn')
-  themeBtn.addEventListener('click',()=>{
+  const themeBtn = document.querySelector(".theme-btn");
+  themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("theme-light");
+    let span = document.querySelectorAll(".bg-text");
 
-    document.body.classList.toggle('theme-light')
-  })
-
-
+    span.forEach((eachSpan) => {
+      if (eachSpan.style.visibility === "hidden") {
+        eachSpan.style.visibility = "visible";
+      } else {
+        eachSpan.style.visibility = "hidden";
+      }
+    });
+  });
 }
 
 PageTransitions();
