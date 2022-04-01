@@ -1,4 +1,4 @@
-* {
+*{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -107,7 +107,7 @@ section {
   }
 }
 
-// controlls
+//! --------- controlls
 
 .controlls {
   position: fixed;
@@ -145,7 +145,7 @@ section {
   }
 }
 
-//* header content
+//!----------- header content
 
 .header-content {
   display: grid;
@@ -256,7 +256,7 @@ section {
   }
 }
 
-//* about
+//! --------- about
 
 .main-title {
   text-align: center;
@@ -347,6 +347,7 @@ section {
       line-height: 2rem;
       color: var(--color-grey-1);
       margin: 2.6rem 0px;
+      font-size: medium;
     }
     h4 {
       font-size: 2rem;
@@ -471,7 +472,8 @@ section {
   }
 }
 
-//porfolios
+//! -------  porfolios
+
 .port-text {
   padding: 2rem 0;
   text-align: center;
@@ -548,7 +550,7 @@ section {
   transform: scale(1);
 }
 
-//blog section
+//! ---------blog section
 
 .blogs {
   display: grid;
@@ -605,11 +607,11 @@ section {
   }
 }
 
-//contact
+//!--------------contact
 
 .contact-content-con {
   display: flex;
-  padding-top: 3.5rem;
+  padding-top: 9.5rem;
   .left-contact {
     flex: 2;
     h4 {
@@ -709,7 +711,7 @@ section {
   }
 }
 
-
+//!-------dark button
 
 .theme-btn {
   top: 3%;
@@ -733,4 +735,110 @@ section {
     color: var(--color-grey-2);
     pointer-events: none;
   }
+}
+
+@media ( max-width: 1000px){
+
+.header-content {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+}
+.header-content .left-header {
+
+  margin-top: 2rem;
+  position: unset;
+
+}
+
+.header-content .left-header .image {
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  background-color: none;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  background-color: inherit;
+}
+.header-content .left-header .image img {
+  border-radius: var(--br-sm-2);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(0%);
+}
+.header-content .right-header {
+
+  display: flex;
+  padding-right: 0rem;
+  justify-content: flex-start;
+}
+.header-content .right-header .name {
+  font-size: 3.52rem;
+  text-align: center;
+}
+.header-content .right-header p {
+  margin: 1rem 0;
+  line-height: 2rem;
+  font-size: 1.7rem;
+  padding: 0px 1.1rem;
+}
+.main-btn {
+  border-radius: 3rem;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  border: 0.1rem solid var(--color-font);
+  display: flex;
+  align-items: center;
+  align-self: center;
+  overflow: hidden;
+}
+
+
+
+
+//! despeus del header
+
+
+  .controlls{
+    background-color: #0092cc;
+  }
+
+  .contact-content-con {
+    display: flex;
+    padding-top: 9.5rem;
+    flex-direction: column;
+}
+
+.about-container .right-about .about-item {
+  min-height: 10rem;
+
+}
+
+.portfolios {
+
+
+  grid-template-columns: repeat(2, 1fr);
+ 
+}
+
+.blogs {
+ 
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.contact-content-con .left-contact .contact-icon {
+
+  display: flex;
+  margin: top 2rem;
+  justify-content: center;
+}
+.contact-content-con .left-contact {
+
+  flex: 2;
+  text-align: center;
+}
 }
