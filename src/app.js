@@ -4,14 +4,7 @@ const secBtn = document.querySelectorAll(".control");
 const allSections = document.querySelector(".main-content");
 
 function PageTransitions() {
-  //!button click active class with this
-  /*   for (let i = 0; i < secBtn.length; i++) {
-    secBtn[i].addEventListener("click", function () {
-      let currenBtn = document.querySelectorAll(".active-btn");
-      currenBtn[0].className = currenBtn[0].className.replace("active-btn", "");
-      this.className += " active-btn";
-    });
-  } */
+
 
   //!button click active class without this
   secBtn.forEach((eachBtn) => {

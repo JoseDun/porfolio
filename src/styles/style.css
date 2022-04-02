@@ -701,7 +701,7 @@ section {
 .portfolios .portfolio-item .hover-items h3 {
   font-size: large;
   font-weight: bolder;
-  color: var(--color-grey-0);
+  color: var(--color-black-pic);
   margin-bottom: 1.5rem;
 }
 
